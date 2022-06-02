@@ -1,0 +1,40 @@
+.registration {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+
+    h1 {
+        padding: 20px;
+        text-align: center;
+        color: $green;
+        overflow: hidden;
+    }
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        max-width: 1400px;
+        padding: 20px 10px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .registration {
+        form {
+            .form-label-group {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .actions {
+                flex-direction: row;
+            }
+        }
+    }
+}

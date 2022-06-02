@@ -1,0 +1,30 @@
+footer {
+  position: fixed;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 100%;
+  padding: 8px 10px;
+  border-top: 1px solid gray;
+
+  background-color: $green;
+  color: white;
+
+  span {
+    display: flex;
+    align-items: center;
+
+    i {
+      margin: 0px 5px;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  footer {
+    font-size: 3vmin;
+  }
+}

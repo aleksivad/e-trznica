@@ -1,0 +1,39 @@
+.actions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  button {
+    width: 100%;
+
+    &.cancelbtn {
+      background-color: #f44336;
+    }
+
+    &.modal_btn {
+        padding: 8px 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .actions {
+    flex-direction: row;
+
+    button {
+      &:first-child {
+        margin-right: 5px;
+      }
+
+      &:last-child {
+        margin-left: 5px;
+      }
+    }
+  }
+}

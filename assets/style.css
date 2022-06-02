@@ -1,0 +1,682 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 transparent;
+          box-shadow: 0 0 0 transparent;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+  font-family: "Montserrat";
+  font-smooth: always;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  color: black;
+  font-weight: 400;
+  letter-spacing: 0px;
+  overflow-x: hidden;
+}
+
+button {
+  border: none;
+  outline: none;
+  width: auto;
+  color: black;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button.more {
+  margin: 10px 0;
+  padding: 4px 10px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 500;
+  background-color: #28a745;
+}
+
+#root {
+  width: 100vw;
+  height: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0px 10px;
+  background-color: #28a745;
+  overflow: visible;
+}
+
+header .reg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: visible;
+}
+
+header .logo {
+  display: none;
+  float: left;
+  height: 100%;
+  width: auto;
+}
+
+header .logo img {
+  height: 8vmin;
+}
+
+header .language {
+  overflow: visible;
+}
+
+header .language .nav-item a {
+  color: #fff;
+}
+
+header .language .nav-item a:hover, header .language .nav-item a:focus {
+  color: #fff;
+}
+
+header .language .nav-item a.dropdown-item {
+  color: black;
+  padding: 4px 10px;
+}
+
+header .language .nav-item a.dropdown-item img {
+  width: 25px;
+  height: auto;
+  margin-right: 5px;
+}
+
+header .language .nav-link {
+  padding: 0;
+}
+
+header .language .dropdown-toggle::after {
+  vertical-align: 0em;
+}
+
+header .language .dropdown-menu {
+  min-width: 5rem;
+}
+
+header button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 8px 10px;
+  color: white;
+}
+
+header button:first-child {
+  border-right: 1px solid white;
+}
+
+header button i {
+  color: white;
+  margin: 0 5px;
+}
+
+@media only screen and (min-width: 430px) {
+  header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header .logo {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  header button {
+    font-size: 3vmin;
+  }
+  header .language a {
+    font-size: 3vmin;
+  }
+  header .logo img {
+    height: 7vmin;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  header .logo img {
+    height: 6vmin;
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  padding: 8px 10px;
+  border-top: 1px solid gray;
+  background-color: #28a745;
+  color: white;
+}
+
+footer span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer span i {
+  margin: 0px 5px;
+}
+
+@media only screen and (min-width: 600px) {
+  footer {
+    font-size: 3vmin;
+  }
+}
+
+main {
+  padding-bottom: 40px;
+}
+
+.actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.actions button {
+  width: 100%;
+}
+
+.actions button.cancelbtn {
+  background-color: #f44336;
+}
+
+.actions button.modal_btn {
+  padding: 8px 10px;
+}
+
+@media screen and (max-width: 300px) {
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .actions {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .actions button:first-child {
+    margin-right: 5px;
+  }
+  .actions button:last-child {
+    margin-left: 5px;
+  }
+}
+
+.title_banner {
+  background-color: #8080800f;
+}
+
+.title_banner .text {
+  position: absolute;
+  padding: 20px;
+  z-index: 1;
+}
+
+.title_banner .text h1, .title_banner .text h2, .title_banner .text button {
+  white-space: normal;
+}
+
+.title_banner .text h2 {
+  font-weight: 600;
+}
+
+.title_banner img {
+  position: relative;
+  float: right;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 400px;
+}
+
+.title_banner img.xl {
+  display: none;
+}
+
+@media only screen and (min-width: 400px) {
+  .title_banner .text {
+    padding: 10% 5%;
+  }
+  .title_banner img {
+    max-height: 450px;
+  }
+  .title_banner img.xs {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .title_banner .text .more {
+    font-size: 15px;
+    padding: 5px 15px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .title_banner .text .more {
+    font-size: 18px;
+    padding: 5px 20px;
+  }
+  .title_banner img.xs {
+    display: none;
+  }
+  .title_banner img.xl {
+    display: block;
+  }
+}
+
+.navbar {
+  overflow: visible;
+  background-color: #28a745;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  overflow: visible;
+}
+
+.navbar-expand-lg .navbar-nav {
+  overflow: visible;
+}
+
+.dropdown,
+.dropleft,
+.dropright,
+.dropup {
+  overflow: visible;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: white;
+  background-color: #1ec545;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: white;
+  background-color: #1ec545;
+}
+
+.navbar-light .navbar-toggler {
+  outline: none;
+  background-color: white;
+}
+
+.navbar-light .navbar-toggler i {
+  color: #28a745;
+}
+
+.btn-outline-success {
+  background-color: white;
+}
+
+.btn-outline-success .fa-search {
+  margin-bottom: -4px;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.form-inline {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar-nav {
+    font-size: 2.5vmin;
+  }
+  .navbar-nav .dropdown-menu {
+    font-size: 2.5vmin;
+  }
+  .form-inline .form-control {
+    width: 50vmin;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .navbar-expand-lg .navbar-collapse {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    width: 315px;
+    z-index: 2;
+  }
+  .navbar-expand-lg .navbar-collapse .navbar-nav {
+    padding: 5px 15px;
+    background-color: #28a745;
+  }
+  .navbar-expand-lg .navbar-collapse .dropdown-item {
+    text-overflow: initial;
+    white-space: normal;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .navbar-toggler {
+    padding: 0.375rem 6px;
+  }
+  .form-inline .btn {
+    padding: 0.375rem 6px;
+  }
+}
+
+.categorys img {
+  width: 40vmin;
+  max-width: 160px;
+  height: 40vmin;
+  max-height: 160px;
+  padding-bottom: 10px;
+}
+
+.categorys h1 {
+  font-size: 7vmin;
+  font-weight: 600;
+  text-align: center;
+  padding: 40px 20px 10px;
+  white-space: normal;
+}
+
+.categorys ul li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  max-width: 50%;
+  margin: 30px 0 0 0;
+  padding: 0 15px;
+  position: relative;
+}
+
+.categorys ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #28a745;
+}
+
+.categorys .text-center {
+  margin: 20px;
+}
+
+.categorys .text-center .btn-success {
+  border-radius: 20px;
+  padding: 10px 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .categorys ul li {
+    -ms-flex: 0 0 33.3333%;
+    -webkit-box-flex: 0;
+            flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .categorys h1 {
+    font-size: 5vmin;
+  }
+  .categorys ul li {
+    -ms-flex: 0 0 20%;
+    -webkit-box-flex: 0;
+            flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .categorys h1 {
+    font-size: 4vmin;
+  }
+  .categorys ul {
+    margin: 0 -5px;
+  }
+  .categorys ul li {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal .fa-close {
+  float: right;
+  font-size: 25px;
+  font-weight: 900;
+  margin: 5px 10px 0;
+}
+
+.modal form {
+  width: 90%;
+  background-color: #f1efef;
+  border: 3px solid #f1f1f1;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal input[type="text"],
+.modal input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.modal .modal_btn {
+  padding: 8px 10px;
+}
+
+.modal .modal_btn:hover {
+  opacity: 0.8;
+}
+
+.modal .cancelbtn {
+  background-color: #f44336;
+}
+
+.modal .imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+.modal img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.modal .container {
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .modal form {
+    width: 450px;
+  }
+}
+
+.registration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.registration h1 {
+  padding: 20px;
+  text-align: center;
+  color: #28a745;
+  overflow: hidden;
+}
+
+.registration form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 1400px;
+  padding: 20px 10px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .registration form .form-label-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .registration form .actions {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+/*# sourceMappingURL=style.css.map */

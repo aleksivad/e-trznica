@@ -1,0 +1,125 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: 100%;
+    height: fit-content;
+    padding: 0px 10px;
+
+    background-color: $green;
+    overflow: visible;
+
+    .reg {
+        display: flex;
+        align-items: center;
+        overflow: visible;
+    }
+
+    .logo {
+        display: none;
+        float: left;
+        height: 100%;
+        width: auto;
+
+        img {
+            height: 8vmin;
+        }
+    }
+
+    .language {
+        overflow: visible;
+
+        .nav-item {
+            a {
+                color: #fff;
+
+                &:hover, &:focus {
+                    color: #fff;
+                }
+
+                &.dropdown-item {
+                    color: black;
+                    padding: 4px 10px;
+
+                    img {
+                        width: 25px;
+                        height: auto;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+
+        .nav-link {
+            padding: 0;
+        }
+
+        .dropdown-toggle::after {
+            vertical-align: 0em;
+        }
+
+        .dropdown-menu {
+            min-width: 5rem;
+        }
+    }
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 8px 10px;
+
+        color: white;
+
+        &:first-child {
+            border-right: 1px solid white;
+        }
+
+        i {
+            color: white;
+            margin: 0 5px;
+        }
+    }
+}
+
+@media only screen and (min-width: 430px) {
+    header {
+        justify-content: space-between;
+        
+        .logo {
+            display: block;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    header {
+        button {
+            font-size: 3vmin;
+        }
+
+        .language {
+            a {
+                font-size: 3vmin;
+            }
+        }
+
+        .logo {
+            img {
+                height: 7vmin;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    header {
+        .logo {
+            img {
+                height: 6vmin;
+            }
+        }
+    }
+}
