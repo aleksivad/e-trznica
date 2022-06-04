@@ -64,6 +64,10 @@ button {
   }
 }
 
+.btn-success:not(:disabled):not(.disabled):active:focus .btn-success.focus, .btn-success:focus {
+  box-shadow: none !important;
+}
+
 #root {
   width: 100vw;
   height: 100%;

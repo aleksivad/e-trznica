@@ -16,6 +16,12 @@
   }
 }
 
+button {
+  &:focus {
+    outline: none;
+  }
+}
+
 @media screen and (max-width: 300px) {
   .cancelbtn {
     width: 100%;
