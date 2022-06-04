@@ -80,9 +80,7 @@ header {
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 10vmin;
   padding: 0px 10px;
   background-color: #28a745;
   overflow: visible;
@@ -174,7 +172,12 @@ header button i {
             justify-content: space-between;
   }
   header .logo {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -196,9 +199,13 @@ header button i {
   }
 }
 
+@media only screen and (min-height: 800px), (min-width: 1200px) {
+  header {
+    height: 6vmin;
+  }
+}
+
 footer {
-  position: fixed;
-  bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -209,6 +216,7 @@ footer {
       -ms-flex-pack: start;
           justify-content: flex-start;
   width: 100%;
+  height: 10vmin;
   padding: 8px 10px;
   border-top: 1px solid gray;
   background-color: #28a745;
@@ -234,8 +242,22 @@ footer span i {
   }
 }
 
+@media only screen and (min-height: 800px), (min-width: 1200px) {
+  footer {
+    height: 6vmin;
+  }
+}
+
 main {
+  min-height: calc(100% - 20vmin);
   padding-bottom: 40px;
+  overflow: visible;
+}
+
+@media only screen and (min-height: 800px), (min-width: 1200px) {
+  main {
+    min-height: calc(100% - 12vmin);
+  }
 }
 
 .actions {
@@ -662,6 +684,11 @@ main {
   margin: 0 auto;
 }
 
+.registration form .more {
+  max-width: 400px;
+  margin: 10px auto;
+}
+
 @media only screen and (min-width: 768px) {
   .registration form .form-label-group {
     display: -webkit-box;
@@ -678,5 +705,21 @@ main {
         -ms-flex-direction: row;
             flex-direction: row;
   }
+}
+
+.product_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product_list .card {
+  margin: 10px;
+  border: 1px solid green;
 }
 /*# sourceMappingURL=style.css.map */
