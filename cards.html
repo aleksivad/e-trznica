@@ -146,126 +146,291 @@
         </div>
       </nav>
 
-      <h1 class="title">Akcije</h1>
-      <div class="product_list">
-        <div class="card" style="width: 18rem">
-          <div class="badge">Akcija</div>
-          <img
-            class="card-img-top"
-            src="./assets/img/breskva.jfif"
-            alt="Card"
-          />
-          <div class="card-body">
-            <h5 class="card-title">Svijeza domaca bresva</h5>
-            <p class="card-text">2.30KM</p>
+      <div class="col page-content order-1 order-md-2">
+        <h1 class="title">Akcije</h1>
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div>
+            <script type="text/javascript">
+              function fnSetSortOrder(obj) {
+                jQuery.ajax({
+                  url: "/ajax.aspx?function=set-catalogue-sort-order",
+                  type: "POST",
+                  data: { field: obj.attr("data-sort-by") },
+                  async: true,
+                  success: function () {
+                    window.location.replace(window.location);
+                  },
+                });
+              }
+
+              jQuery(document).ready(function () {
+                jQuery(".sort-by a[data-sort-by]").click(function () {
+                  fnSetSortOrder(jQuery(this));
+                });
+              });
+            </script>
+
+            <ul class="nav nav-pills sort-by">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="javascript:void(0);"
+                  data-sort-by="0"
+                  >Filter 1</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);" data-sort-by="1"
+                  >Filter 2</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="javascript:void(0);" data-sort-by="2"
+                  >filter 3</a
+                >
+              </li>
+            </ul>
           </div>
+          <div class="d-none d-sm-block"><strong>24</strong> / 105</div>
         </div>
 
-        <div class="card" style="width: 18rem">
-          <div class="badge">Akcija</div>
-          <img class="card-img-top" src="./assets/img/sir.jfif" alt="Card" />
-          <div class="card-body">
-            <h5 class="card-title">Dzem od sljiva iz organske proizvodnje</h5>
-            <p class="card-text">7.00KM</p>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <div class="badge">Akcija</div>
-          <img
-            class="card-img-top"
-            src="./assets/img/jabuke.jfif"
-            alt="Card image cap"
-          />
-          <div class="card-body">
-            <h5 class="card-title">Autohtone vrste jabuka</h5>
-            <p class="card-text">1.00KM</p>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <div class="badge">Akcija</div>
-          <img
-            class="card-img-top"
-            src="./assets/img/jagode.jfif"
-            alt="Card image cap"
-          />
-          <div class="card-body">
-            <h5 class="card-title">Kupine, maline, jagode...</h5>
-            <p class="card-text">2.00KM</p>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <div class="badge">Akcija</div>
-          <img
-            class="card-img-top"
-            src="./assets/img/rakija.jpg"
-            alt="Card image cap"
-          />
-          <div class="card-body">
-            <h5 class="card-title">Domaca rakija od sljive</h5>
-            <p class="card-text">10.00KM</p>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <img
-            class="card-img-top"
-            src="./assets/img/nar.jfif"
-            alt="Card image cap"
-          />
-          <div class="card-body">
-            <h5 class="card-title">Nar</h5>
-            <p class="card-text">3.00KM</p>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <img
-            class="card-img-top"
-            src="./assets/img/meso.jfif"
-            alt="Card image cap"
-          />
-          <div class="card-body">
-            <h5 class="card-title">Svinjetina sa nasih farmi</h5>
-            <p class="card-text">12.60KM</p>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <img
-            class="card-img-top"
-            src="./assets/img/sir1.jfif"
-            alt="Card image cap"
-          />
-          <div class="card-body">
-            <h5 class="card-title">Domaci dimljeni sir</h5>
-            <p class="card-text">13.50KM</p>
-          </div>
-        </div>
-      </div>
-
-      <nav aria-label="Page navigation example" class="pagination_container">
-        <ul class="pagination">
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-              <span class="sr-only">Previous</span>
+        <ul class="product-list d-flex flex-wrap">
+          <li>
+            <a href="#" class="product-item d-block">
+              <div class="product-img">
+                <img
+                  src="./assets/img/breskva.jfif"
+                  alt="Breskva"
+                  title="Domaca breskva"
+                />
+              </div>
+              <h3>Organska domaca breskva</h3>
+              <div class="price">2.40 KM</div>
+              <div class="product-badges">
+                <div class="product-badge badge-special">Akcija</div>
+              </div>
             </a>
           </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-              <span class="sr-only">Next</span>
+
+          <li>
+            <a href="#" class="product-item d-block">
+              <div class="product-img">
+                <img
+                  src="./assets/img/dzem.jfif"
+                  alt="Dzem"
+                  title="Dzem od sljiva"
+                />
+              </div>
+              <h3>Dzem od sljiva</h3>
+              <div class="price">12.00 KM</div>
+              <div class="product-badges">
+                <div class="product-badge badge-special">Akcija</div>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="product-item d-block">
+              <div class="product-img">
+                <img
+                  src="./assets/img/images.jfif"
+                  alt="Avokado"
+                  title="Avokado iz uvoza"
+                />
+              </div>
+              <h3>Avokado uvezen iz Turske</h3>
+              <div class="price">3,00 KM</div>
+              <div class="product-badges">
+                <div class="product-badge badge-special">Akcija</div>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="product-item d-block">
+              <div class="product-img">
+                <img
+                  src="./assets/img/jabuke.jfif"
+                  alt="Jabuka"
+                  title="Eko sorta jabuka"
+                />
+              </div>
+              <h3>Eko sorta jabuka</h3>
+              <div class="price">2.00 KM</div>
+              <div class="product-badges">
+                <div class="product-badge badge-special">Akcija</div>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="product-item d-block">
+              <div class="product-img">
+                <img
+                  src="./assets/img/jagode.jfif"
+                  alt="Domace jagode"
+                  title="Domace jagode"
+                />
+              </div>
+              <h3>Domace jagode</h3>
+              <div class="price">4.00KM</div>
+              <div class="product-badges">
+                <div class="product-badge badge-special">Akcija</div>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="product-item d-block">
+              <div class="product-img">
+                <img
+                  src="./assets/img/meso.jfif"
+                  alt="Svinjetina"
+                  title="Domaca svinjetina sa nasih farmi"
+                />
+              </div>
+              <h3>Domaca svinjetina sa nasih farmi</h3>
+              <div class="price">13,00 KM</div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="product-item d-block">
+              <div class="product-img">
+                <img src="./assets/img/nar.jfif" alt="Nar" title="Nar" />
+              </div>
+              <h3>Nar</h3>
+              <div class="price">5,50 KM</div>
+              <div class="product-badges">
+                <div class="product-badge badge-special">Akcija</div>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="product-item d-block">
+              <div class="product-img">
+                <img
+                  src="./assets/img/piletina.jfif"
+                  alt="Piletina"
+                  title="Pilece meso"
+                />
+              </div>
+              <h3>Pilece meso</h3>
+              <div class="price">8.00 KM</div>
+              <div class="product-badges">
+                <div class="product-badge badge-special">Akcija</div>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="product-item d-block">
+              <div class="product-img">
+                <img
+                  src="./assets/img/sir.jfif"
+                  alt="Sir"
+                  title="Domaci dimljeni sir"
+                />
+              </div>
+              <h3>Domaci dimljeni sir</h3>
+              <div class="price">12,00 KM</div>
+              <div class="product-badges">
+                <div class="product-badge badge-special">Akcija</div>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="product-item d-block">
+              <div class="product-img">
+                <img
+                  src="./assets/img/sir1.jfif"
+                  alt="Sir"
+                  title="Sir od punomasnog mlijeka"
+                />
+              </div>
+              <h3>Sir od punomasnog mlijeka</h3>
+              <div class="price">13.00 KM</div>
+              <div class="product-badges">
+                <div class="product-badge badge-special">Akcija</div>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="product-item d-block">
+              <div class="product-img">
+                <img
+                  src="./assets/img/sljiva.jfif"
+                  alt="Sliva"
+                  title="Sljiva"
+                />
+              </div>
+              <h3>Sljiva</h3>
+              <div class="price">1.80 KM</div>
+              <div class="product-badges">
+                <div class="product-badge badge-special">Akcija</div>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="product-item d-block">
+              <div class="product-img">
+                <img
+                  src="./assets/img/dzem.jfif"
+                  alt="Dzem"
+                  title="Dzem od domacih sljiva"
+                />
+              </div>
+              <h3>Dzem od sljiva</h3>
+              <div class="price">8.00 KM</div>
+              <div class="product-badges">
+                <div class="product-badge badge-special">Akcija</div>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="product-item d-block">
+              <div class="product-img">
+                <img
+                  src="./assets/img/rakija.jpg"
+                  alt="Rakija"
+                  title="Rakija od raznih vrsta voca"
+                />
+              </div>
+              <h3>Rakija od raznih vrsta voca</h3>
+              <div class="price">12.00 KM</div>
+              <div class="product-badges">
+                <div class="product-badge badge-special">Akcija</div>
+              </div>
             </a>
           </li>
         </ul>
-      </nav>
 
+        <nav aria-label="Page navigation example" class="pagination_container">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </main>
 
     <footer>

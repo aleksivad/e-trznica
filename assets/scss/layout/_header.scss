@@ -29,8 +29,11 @@ header {
   .logo {
     display: none;
     float: left;
+
     height: 100%;
     width: auto;
+
+    overflow: hidden;
 
     img {
       height: 8vmin;
