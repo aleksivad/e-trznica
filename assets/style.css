@@ -236,6 +236,7 @@ footer {
   border-top: 1px solid gray;
   background-color: #28a745;
   color: white;
+  overflow: hidden;
 }
 
 footer span {
@@ -735,6 +736,14 @@ button:focus {
   }
 }
 
+.title {
+  text-align: center;
+  padding: 20px 10px 10px;
+  font-size: 30px;
+  font-weight: 600;
+  color: #28a745;
+}
+
 .product_list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -747,7 +756,60 @@ button:focus {
 }
 
 .product_list .card {
+  position: relative;
   margin: 10px;
   border: 1px solid green;
+}
+
+.product_list .card:hover {
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+.product_list .card .badge {
+  position: absolute;
+  top: 2%;
+  left: 0px;
+  padding: 4px 10px;
+  background: #28a745;
+  color: white;
+}
+
+.product_list .card-img-top {
+  width: auto;
+  height: 65%;
+}
+
+.product_list .card-body {
+  overflow: hidden;
+}
+
+.product_list .card-title {
+  font-size: 20px;
+  font-weight: 400;
+  text-overflow: unset;
+  white-space: pre-wrap;
+}
+
+.product_list .card-text {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.pagination_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0px 0px;
+}
+
+.pagination_container .page-link {
+  color: #28a745;
 }
 /*# sourceMappingURL=style.css.map */
