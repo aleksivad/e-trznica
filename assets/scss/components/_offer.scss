@@ -1,0 +1,61 @@
+ul {
+  &.manufacturers_container {
+    margin: 0 0 1em 1em;
+  }
+}
+
+.offer-list {
+  overflow: visible;
+
+  li {
+    margin-bottom: 1rem;
+    overflow: visible;
+
+    a {
+      strong {
+        white-space: pre-wrap;
+      }
+
+      p {
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 3px;
+      height: 3px;
+      margin: 0 1em 0.2em -1.2em;
+    }
+
+    a {
+      transition: all 0.3s ease-in-out;
+      color: #000;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .offer-list {
+    column-count: 2;
+    column-gap: 3em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .offer-list {
+    column-count: 3;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .offer-list {
+    column-count: 4;
+  }
+}

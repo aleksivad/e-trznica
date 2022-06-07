@@ -112,6 +112,7 @@ a:hover {
     font-weight: 500;
     color: $green;
     text-decoration: none;
+    white-space: pre-wrap;
 
     &:hover {
       text-decoration: none;
@@ -143,6 +144,7 @@ a:hover {
   font-size: 30px;
   font-weight: 600;
   color: $green;
+  white-space: pre-wrap;
 }
 
 .pagination_container {

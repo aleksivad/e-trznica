@@ -151,26 +151,6 @@
 
         <div class="d-flex justify-content-between align-items-center mb-4">
           <div>
-            <script type="text/javascript">
-              function fnSetSortOrder(obj) {
-                jQuery.ajax({
-                  url: "/ajax.aspx?function=set-catalogue-sort-order",
-                  type: "POST",
-                  data: { field: obj.attr("data-sort-by") },
-                  async: true,
-                  success: function () {
-                    window.location.replace(window.location);
-                  },
-                });
-              }
-
-              jQuery(document).ready(function () {
-                jQuery(".sort-by a[data-sort-by]").click(function () {
-                  fnSetSortOrder(jQuery(this));
-                });
-              });
-            </script>
-
             <ul class="nav nav-pills sort-by">
               <li class="nav-item">
                 <a
