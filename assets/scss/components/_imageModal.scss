@@ -1,0 +1,133 @@
+.modal {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    display: block;
+}
+
+.head_line {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.image_container {
+    display: flex;
+    align-items: center;
+
+    i {
+        position: absolute;
+        z-index: 1;
+        font-size: 25px;
+
+        &.fa-angle-left {
+            left: 0;
+            top: 50%;
+        }
+
+        &.fa-angle-right {
+            right: 0;
+            top: 50%;
+        }
+    }
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+}
+
+.article_name {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: orange;
+    color: white;
+}
+
+@media only screen and (min-width: 370px) {
+    .image_container {
+        img {
+            padding: 20px;
+        }
+    }
+}
+
+@media only screen and (min-width: 450px) {
+    .image_container {
+        img {
+            padding: 40px;
+        }
+
+        i {
+            &.fa-angle-left {
+                left: 20px;
+            }
+    
+            &.fa-angle-right {
+                right: 20px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .head_line {
+        p, i {
+            font-size: 20px;
+        }
+    }
+    .image_container {
+        img {
+            width: 80vmin;
+        }
+
+        i {
+            font-size: 30px;
+        }
+    }
+
+    .article_name {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .head_line {
+        p, i {
+            font-size: 25px;
+        }
+    }
+    .image_container {
+        i {
+            font-size: 50px;
+        }
+    }
+
+    .article_name {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-width: 1700px) {
+    .head_line {
+        p, i {
+            font-size: 30px;
+        }
+    }
+    .image_container {
+        i {
+            font-size: 60px;
+        }
+    }
+
+    .article_name {
+        font-size: 28px;
+    }
+}
